@@ -1,11 +1,14 @@
 {
   "name": "@markdown-previewer/source",
+  "homepage": "http://sinan14.github.io/markdown-previewer/",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "predeploy": "npm run build --omit=dev",
+    "deploy": "gh-pages -d build"
   },
   "private": true,
   "dependencies": {
@@ -44,6 +47,7 @@
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0",
+    "gh-pages": "^5.0.0",
     "jsdom": "~20.0.3",
     "nx": "16.2.1",
     "nx-cloud": "latest",
